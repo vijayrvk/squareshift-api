@@ -1,0 +1,126 @@
+{
+	"info": {
+		"_postman_id": "c6ac3a54-d73b-4a9f-bb76-76c547776b3d",
+		"name": "SquareShift",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1237918"
+	},
+	"item": [
+		{
+			"name": "Cart Add",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"productId\": 100,\n        \"quantity\": 1\n    },{\n        \"productId\": 110,\n        \"quantity\": 5\n    },{\n        \"productId\": 103,\n        \"quantity\": 1\n    },{\n        \"productId\": 188,\n        \"quantity\": 1\n    },{\n        \"productId\": 110,\n        \"quantity\": 10\n    },{\n        \"productId\": 102,\n        \"quantity\": 10\n    }\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/cart/add",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"cart",
+						"add"
+					]
+				},
+				"description": "Adding products to cart"
+			},
+			"response": []
+		},
+		{
+			"name": "Total value",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"productId\": 100,\n        \"quantity\": 1\n    },{\n        \"productId\": 110,\n        \"quantity\": 5\n    },{\n        \"productId\": 103,\n        \"quantity\": 1\n    },{\n        \"productId\": 188,\n        \"quantity\": 1\n    },{\n        \"productId\": 110,\n        \"quantity\": 1\n    },{\n        \"productId\": 102,\n        \"quantity\": 1\n    }\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/cart/total/465535",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"cart",
+						"total",
+						"465535"
+					]
+				},
+				"description": "Getting total value and shipping charge details"
+			},
+			"response": []
+		},
+		{
+			"name": "List Cart",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"productId\": 100,\n        \"quantity\": 1\n    },{\n        \"productId\": 110,\n        \"quantity\": 5\n    },{\n        \"productId\": 103,\n        \"quantity\": 1\n    },{\n        \"productId\": 188,\n        \"quantity\": 1\n    },{\n        \"productId\": 110,\n        \"quantity\": 1\n    },{\n        \"productId\": 102,\n        \"quantity\": 1\n    }\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/cart/list",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"cart",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Clear Cart",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/cart/delete",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"cart",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
